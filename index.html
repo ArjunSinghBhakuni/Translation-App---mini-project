@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/4be396111e.js" 
+    crossorigin="anonymous"></script>
+    <title>Translator</title>
+</head>
+<body>
+
+    <h1 id="head">Translator</h1>
+
+    <div id="result">
+
+        <div id="input">
+            <select name="input_lang" id="input_lang">
+                <option value="">Detect Language</option>
+                <option value="en">English</option>
+                <option value="hi">Hindi</option>
+                <option value="es">Spanish</option>
+                <option value="de">German</option>
+                <option value="el">Greek</option>
+                <option value="ar">Arabic</option>
+                <option value="zh">Chinese </option>
+                <option value="nl">Dutch </option>
+                <option value="fr">French </option>
+                <option value="ja">Japanese</option>
+            </select>
+            
+         
+            <textarea id="input_text" oninput="debounce(getdata,500)" placeholder="Enter Text" maxlength="250"></textarea>
+
+            
+        </div>
+        <i id="micro" class="fa-solid fa-microphone" onclick="speechtotext()"></i>
+
+        <button id="button" onclick="debounce(getdata,500)">Translate</button>
+
+
+        <i id="convert" class="fa-solid fa-right-left"></i>
+
+        <div id="output">
+            <select name="output_lang" id="output_lang">
+                <option value="en">English</option>
+                <option value="hi">Hindi</option>
+                <option value="es">Spanish</option>
+                <option value="de">German</option>
+                <option value="el">Greek</option>
+                <option value="ar">Arabic</option>
+                <option value="zh">Chinese </option>
+                <option value="nl">Dutch </option>
+                <option value="fr">French </option>
+                <option value="ja">Japanese</option>
+            </select>
+            <div id="result_area">
+                <p id="product">Translation</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script src="index.js"></script>
